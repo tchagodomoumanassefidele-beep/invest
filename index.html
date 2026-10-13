@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maquette responsive d'un tableau de bord d'investissement fictif.">
+  <title>NovaInvest — Maquette</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="demo-banner">MAQUETTE DE DÉMONSTRATION · Aucune transaction réelle</div>
+  <main class="auth-shell" id="authView">
+    <section class="auth-visual">
+      <div class="brand"><span class="brand-mark">N</span><span>Nova<span class="brand-light">Invest</span></span></div>
+      <div class="visual-copy">
+        <span class="eyebrow">VOTRE AVENIR, VOTRE VISION</span>
+        <h1>Donnez une nouvelle dimension à vos ambitions.</h1>
+        <p>Une interface de démonstration pour explorer un tableau de bord d'investissement moderne.</p>
+      </div>
+      <div class="visual-bottom"><span class="pulse-dot"></span> Espace de démonstration sécurisé</div>
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+    </section>
+    <section class="auth-panel">
+      <div class="mobile-brand brand"><span class="brand-mark">N</span><span>Nova<span class="brand-light">Invest</span></span></div>
+      <div class="auth-card">
+        <span class="eyebrow">BIENVENUE CHEZ NOVAINVEST</span>
+        <h2>Accédez à votre espace</h2>
+        <p class="muted">Entrez vos informations pour découvrir la maquette de votre compte.</p>
+        <form id="loginForm">
+          <label for="firstName">Prénom</label>
+          <input id="firstName" name="firstName" type="text" placeholder="Ex. : Alex" autocomplete="given-name" required maxlength="40">
+          <label for="lastName">Nom</label>
+          <input id="lastName" name="lastName" type="text" placeholder="Ex. : Mensah" autocomplete="family-name" required maxlength="40">
+          <button class="primary-btn" type="submit">Se connecter <span aria-hidden="true">→</span></button>
+        </form>
+        <div class="divider"><span></span> ou <span></span></div>
+        <button class="google-btn" id="googleDemo" type="button"><span class="google-g">G</span> Continuer avec Google <small>Démo</small></button>
+        <p class="fine-print">Aucun compte réel n'est créé. Les informations restent dans cette session de démonstration et ne sont envoyées à aucun serveur.</p>
+      </div>
+      <footer>© 2026 NovaInvest · Projet fictif</footer>
+    </section>
+  </main>
+
+  <main class="dashboard hidden" id="dashboardView">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand sidebar-brand"><span class="brand-mark">N</span><span>Nova<span class="brand-light">Invest</span></span></div>
+      <div class="profile-mini"><div class="avatar" id="avatarInitials">AM</div><div><strong id="sideName">Alex Mensah</strong><small>Compte démo</small></div></div>
+      <nav class="nav-menu" aria-label="Navigation principale">
+        <a href="#overview" class="nav-item active" data-section="overview"><span>▦</span> Vue d'ensemble</a>
+        <a href="#investments" class="nav-item" data-section="investments"><span>↗</span> Mes investissements</a>
+        <a href="#activity" class="nav-item" data-section="activity"><span>◷</span> Activité</a>
+        <a href="#profile" class="nav-item" data-section="profile"><span>◎</span> Mon profil</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-box"><span class="help-icon">✦</span><strong>Un espace pour vos projets</strong><p>Explorez les différentes sections de cette maquette.</p></div><button class="logout-btn" id="logoutBtn"><span>↪</span> Se déconnecter</button></div>
+    </aside>
+    <section class="dashboard-main">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+        <div><span class="eyebrow">ESPACE PERSONNEL</span><h1 id="greeting">Bonjour, Alex 👋</h1></div>
+        <div class="topbar-right"><span class="demo-pill"><span class="pulse-dot"></span> Mode démo</span><div class="avatar small-avatar" id="topAvatar">AM</div></div>
+      </header>
+
+      <section class="content-section" id="overviewSection">
+        <div class="welcome-strip"><div><span class="eyebrow">VOTRE ESPACE NOVAINVEST</span><h2>Votre vision commence ici.</h2><p>Voici un aperçu fictif de votre situation financière.</p></div><div class="strip-icon">✧</div></div>
+        <div class="section-heading"><div><h2>Vue d'ensemble</h2><p>Résumé de votre compte</p></div><span class="date-chip" id="todayDate">Aujourd'hui</span></div>
+        <div class="stats-grid">
+          <article class="stat-card balance-card"><div class="stat-top"><span>Solde total</span><span class="stat-icon">◈</span></div><div class="amount">0 <small>FCFA</small></div><div class="stat-note"><span class="neutral-tag">Compte démo</span> <span>Solde initial</span></div><div class="balance-decoration"></div></article>
+          <article class="stat-card"><div class="stat-top"><span>Investissements</span><span class="stat-icon pale">↗</span></div><div class="amount dark-amount">0 <small>FCFA</small></div><div class="stat-note">Aucun investissement actif</div><div class="mini-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article class="stat-card"><div class="stat-top"><span>Gains simulés</span><span class="stat-icon pale">⌁</span></div><div class="amount dark-amount">0 <small>FCFA</small></div><div class="stat-note">Aucun gain enregistré</div><div class="mini-line second"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+        </div>
+        <div class="main-grid">
+          <article class="panel chart-panel"><div class="panel-heading"><div><h3>Évolution du compte</h3><p>Simulation de votre solde</p></div><span class="period-select">7 derniers jours⌄</span></div><div class="chart-area"><div class="chart-y"><span>10k</span><span>7,5k</span><span>5k</span><span>2,5k</span><span>0</span></div><div class="chart-graphic"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 600 190" preserveAspectRatio="none" aria-label="Graphique de démonstration plat à zéro"><defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#37c99a" stop-opacity=".22"/><stop offset="100%" stop-color="#37c99a" stop-opacity="0"/></linearGradient></defs><path d="M0 174 L600 174 L600 190 L0 190 Z" fill="url(#chartFill)"/><path d="M0 174 L600 174" fill="none" stroke="#24b78a" stroke-width="3" stroke-linecap="round"/></svg><div class="chart-x"><span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span></div></div></div><div class="chart-legend"><span></span> Solde du compte <small>Données fictives</small></div></article>
+          <article class="panel quick-panel"><div class="panel-heading"><div><h3>Actions rapides</h3><p>Accès aux fonctions de la maquette</p></div></div><button class="quick-action" data-demo-action="Dépôt"><span class="quick-icon green">＋</span><span><strong>Ajouter des fonds</strong><small>Simulation uniquement</small></span><b>→</b></button><button class="quick-action" data-demo-action="Retrait"><span class="quick-icon blue">↗</span><span><strong>Demander un retrait</strong><small>Simulation uniquement</small></span><b>→</b></button><button class="quick-action" data-demo-action="Investissement"><span class="quick-icon violet">◈</span><span><strong>Découvrir les offres</strong><small>Aucune offre réelle</small></span><b>→</b></button><div class="notice"><span>ⓘ</span><p>Les boutons sont interactifs à titre de démonstration. Aucun mouvement d'argent n'est possible.</p></div></article>
+        </div>
+        <article class="panel activity-panel"><div class="panel-heading"><div><h3>Activité récente</h3><p>Les derniers événements de votre compte</p></div><button class="text-btn" data-section-link="activity">Voir tout →</button></div><div class="empty-state"><div class="empty-icon">◷</div><strong>Aucune activité pour le moment</strong><p>Vos activités simulées apparaîtront ici.</p></div></article>
+      </section>
+
+      <section class="content-section hidden" id="investmentsSection"><div class="section-heading"><div><h2>Mes investissements</h2><p>Suivez vos placements fictifs.</p></div></div><div class="panel empty-page"><div class="empty-icon">◈</div><h3>Aucun investissement actif</h3><p>Cette maquette ne propose pas de placements réels ni de promesses de rendement.</p><button class="primary-btn compact" data-demo-action="Investissement">Explorer la démo</button></div></section>
+      <section class="content-section hidden" id="activitySection"><div class="section-heading"><div><h2>Historique d'activité</h2><p>Un aperçu de vos opérations fictives.</p></div></div><div class="panel"><div class="table-head"><span>Événement</span><span>Date</span><span>Statut</span><span>Montant</span></div><div class="empty-state"><div class="empty-icon">◷</div><strong>Aucune activité enregistrée</strong><p>Il n'y a encore aucune opération dans cette démo.</p></div></div></section>
+      <section class="content-section hidden" id="profileSection"><div class="section-heading"><div><h2>Mon profil</h2><p>Informations de votre session de démonstration.</p></div></div><div class="panel profile-panel"><div class="profile-large avatar" id="profileAvatar">AM</div><div class="profile-details"><span class="eyebrow">NOM COMPLET</span><h3 id="profileFullName">Alex Mensah</h3><p>Compte de démonstration · Aucun compte financier réel</p></div><div class="profile-row"><span>Type de compte</span><strong>Démo</strong></div><div class="profile-row"><span>Solde affiché</span><strong>0 FCFA</strong></div><div class="profile-row"><span>Authentification Google</span><strong>Non connectée · Simulation</strong></div></div></section>
+      <footer class="dashboard-footer">NovaInvest est une maquette fictive. Elle ne fournit aucun service financier réel.</footer>
+    </section>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
